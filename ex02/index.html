@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>somando numeros</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-transform: uppercase;
+            color: cornflowerblue;
+            text-shadow: 1px 1px 3px white;
+
+        }
+        input{border-radius: 10px;
+            padding: 7px;
+            border: 1px ;
+            background-color:rgba(248, 248, 248, 0.829);
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.555);
+        }
+        #botao{background-color: white;
+            text-transform: uppercase;
+            border: 2px solid rgba(100, 148, 237, 0.473) ;
+            
+        }
+        #caixa{width: 500px;
+            padding: 10px;
+            margin: auto;
+            border-radius: 5px;
+            background-color: rgba(210, 105, 30, 0.158);
+        }
+        #res{padding: 10px;
+            margin:10px;
+            text-transform: uppercase;
+            border-radius: 5px;
+            background-color: rgba(100, 148, 237, 0.158);
+        }
+
+        
+    </style>
+
+</head>
+<body>
+<div id="caixa">
+    <h1>Somando valores</h1>
+    <input type="number" name="txn1" id="txn1"> +
+    <input type="number" name="txn2" id="txn2">
+    <input type="button" value="somar" onclick="somar()" id="botao">
+    <div id="res">resultado: </div>
+  </div>
+    <script>
+        function somar() {
+            var tn1 = document.getElementById('txn1')
+            var tn2 =document.querySelector('input#txn2')
+            var res = document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = 'A soma entre ' + n1 + '+'+n2+' e igual a ' +s
+        }
+    </script>
+</body>
+</html>
